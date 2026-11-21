@@ -1,0 +1,128 @@
+{
+  "file_count": 4,
+  "files": [
+    {
+      "brands": [
+        "isom",
+        "isom",
+        "iso2",
+        "avc1",
+        "mp41"
+      ],
+      "path": "examples/in/01_hook.mp4",
+      "video_tracks": [
+        {
+          "codec": "avc1",
+          "coded_height": 1920,
+          "coded_width": 1080,
+          "dar": "9:16",
+          "display_height": 1920.0,
+          "display_width": 1080.0,
+          "duration_s": 1.5,
+          "rotation": 0,
+          "sar": "1:1",
+          "track_id": 1
+        }
+      ]
+    },
+    {
+      "brands": [
+        "isom",
+        "isom",
+        "iso2",
+        "avc1",
+        "mp41"
+      ],
+      "path": "examples/in/02_point.mp4",
+      "video_tracks": [
+        {
+          "codec": "avc1",
+          "coded_height": 1920,
+          "coded_width": 1080,
+          "dar": "9:16",
+          "display_height": 1920.0,
+          "display_width": 1080.0,
+          "duration_s": 1.5,
+          "rotation": 0,
+          "sar": "1:1",
+          "track_id": 1
+        }
+      ]
+    },
+    {
+      "brands": [
+        "isom",
+        "isom",
+        "iso2",
+        "avc1",
+        "mp41"
+      ],
+      "path": "examples/in/03_quote.mp4",
+      "video_tracks": [
+        {
+          "codec": "avc1",
+          "coded_height": 1920,
+          "coded_width": 1080,
+          "dar": "16:9",
+          "display_height": 1080.0,
+          "display_width": 1920.0,
+          "duration_s": 1.5,
+          "rotation": 90,
+          "sar": "1:1",
+          "track_id": 1
+        }
+      ]
+    },
+    {
+      "brands": [
+        "isom",
+        "isom",
+        "iso2",
+        "avc1",
+        "mp41"
+      ],
+      "path": "examples/in/04_tail.mp4",
+      "video_tracks": [
+        {
+          "codec": "avc1",
+          "coded_height": 1280,
+          "coded_width": 720,
+          "dar": "9:16",
+          "display_height": 1280.0,
+          "display_width": 720.0,
+          "duration_s": 1.5,
+          "rotation": 0,
+          "sar": "1:1",
+          "track_id": 1
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "code": "batch_size_outlier",
+      "detail": "1920x1080 differs from batch majority 1080x1920",
+      "file": "examples/in/03_quote.mp4",
+      "severity": "error"
+    },
+    {
+      "code": "target_aspect_mismatch",
+      "detail": "examples/in/03_quote.mp4 is 16:9, target douyin-9x16 needs 9:16",
+      "file": "examples/in/03_quote.mp4",
+      "severity": "error"
+    },
+    {
+      "code": "batch_size_outlier",
+      "detail": "720x1280 differs from batch majority 1080x1920",
+      "file": "examples/in/04_tail.mp4",
+      "severity": "error"
+    }
+  ],
+  "min_height": null,
+  "ok": false,
+  "summary": {
+    "errors": 3,
+    "warnings": 0
+  },
+  "target": "douyin-9x16"
+}
